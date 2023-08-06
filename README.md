@@ -2,11 +2,14 @@
 
 MythTV Player for Roku
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/9ab8e8a8-2caa-43d3-b94c-a8b4f7e1b876)
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/b7499c9c-bd4b-4db6-8c5c-1cfcb9a301fe)
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/eef22297-a5f4-4a05-9cfe-985608a2621b)
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/598a89a6-231d-4b35-871d-59f3581ba502)
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/cd370e13-cfd1-459b-8364-b656ff3ca078)
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/8d86b3dd-26aa-4737-8963-9d5803f775c1)
+
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/9015e5a5-a873-4d9d-ac20-e65925d6ddac)
+
 
 ## How to
 
