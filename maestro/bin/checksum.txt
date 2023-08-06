@@ -1,0 +1,4 @@
+59c61c552fbf460d90b8ebbe0b4a5c0cf80cc99d95ca8912d5c20f17c68cb1ce  maestro-linux-amd64
+6e95aece77f52b8b482fe2b3cbfa0926b7f281c046a1a7e48ae46d8cdeba4404  maestro-linux-armv6l
+885798881a29b4280fa833613f39daff8ce6324c2b734b18e27cf79ad69dd6d7  maestro-linux-armv7l
+f78c334a77d9d9ca428f9e25ecf58cd4b4378b3e8ceb198da93161048c498637  maestro-win-amd64.exe
