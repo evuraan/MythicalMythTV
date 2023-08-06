@@ -21,31 +21,33 @@ maestro has address 192.168.1.35
 
 #### Usage
 
-<pre>
+```bash
 $ ./maestro -h
 Usage of ./maestro:
   -dbHost string
-        database host (default "127.0.0.1")
+    	database host (default "127.0.0.1")
   -dbName string
-        database (default "mythconverg")
+    	database (default "mythconverg")
+  -debug
+    	enable debug mode
   -help
-        Show this help message
+    	Show this help message
   -interval duration
-        time interval to update records (default 5m0s)
+    	time interval to update records (default 5m0s)
   -maestroBaseURL string
-        maestro base url (default "http://maestro:8080")
+    	maestro base url (default "http://maestro:8080")
   -minSize int
-        minimum recording size in bytes (default 10000)
+    	minimum recording size in bytes (default 10000)
   -mythBE string
-        MythTV Backend and Port (default "127.0.0.1:6544")
+    	MythTV Backend and Port (default "127.0.0.1:6544")
   -port int
-        server port (default 8080)
+    	server port (default 8080)
   -recordingsPath string
-        path for recordings folder (default "/var/lib/mythtv/recordings")
+    	path for recordings folder (default "/var/lib/mythtv/recordings")
   -version
-        Show version information
-</pre>
-
+    	Show version information
+```
+  
 #### Setup
 
 Download the binary from the `bin` folder of this repo and launch the service.
