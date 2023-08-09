@@ -80,7 +80,7 @@ Or, for an older Roku device, we had to specify the `mp3` audio codec for the ou
 ffmpeg -err_detect ignore_err  -i  "$srcFile" -video_track_timescale 30000  -vcodec copy -acodec mp3 -fflags +genpts <output file>
 ```
 
-`utils` folder contains an advanced util script example - feel free to tweak and use according to your setup.
+`utils` folder contains an [advanced util script example](../utils/mp4Cut.sh) - feel free to tweak and use according to your setup.
 
 ## Thumbnails
 
