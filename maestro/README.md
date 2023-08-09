@@ -4,20 +4,17 @@
 
 ## Setting up `maestro`
 
-#### DNS Entry: `maestro`
+#### Connectivity to `maestro`
+It is essential that the Roku device is able to connect to `http://<your maestro endpoint>:8080`.
 
-The Roku channel relies on a local DNS entry, `maestro`.
+You will get prompted for input if this value is not set before:
 
-This DNS entry must exist in your local network.
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/2903f7c6-ad09-44c7-9c7f-5afdff9328fd)
 
-It is essential that the Roku device is able to resolve `maestro` and connect to `http://maestro:8080`.
+Enter your hostname or ip address:
 
-Example from our test setup:
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/ece69cf9-8246-4b63-97d8-ef9d9e0728d1)
 
-```bash
-$ host maestro
-maestro has address 192.168.1.35
-```
 
 #### Usage
 
