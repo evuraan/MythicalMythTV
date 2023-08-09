@@ -4,7 +4,7 @@
 
 ## Setting up `maestro`
 
-Download the binary from the `bin` folder of this repo and launch the service.
+Download the suitable binary from the [bin](./bin) folder and launch the service.
 
 `maestro` expects to find environment variables `MYSQL_USERNAME` and `MYSQL_PASSWORD` to connect to your database server.
 
