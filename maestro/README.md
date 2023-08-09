@@ -4,19 +4,21 @@
 
 ## Setting up `maestro`
 
-#### Connectivity to `maestro`
-It is essential that the Roku device is able to connect to `http://<your maestro endpoint>:8080`.
+Download the binary from the `bin` folder of this repo and launch the service.
 
-You will get prompted for input if this value is not set before:
+`maestro` expects to find environment variables `MYSQL_USERNAME` and `MYSQL_PASSWORD` to connect to your database server.
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/2903f7c6-ad09-44c7-9c7f-5afdff9328fd)
+`/etc/crontab:`
 
-Enter your hostname or ip address:
+<pre>
+# Set environment variables
+MYSQL_USERNAME="username"
+MYSQL_PASSWORD="dbPasswd"
+*/4  *  * * *   evuraan  /home/evuraan/maestro -dbHost 127.0.0.1  1>/dev/null 2>&1 || : 
+</pre>
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/ece69cf9-8246-4b63-97d8-ef9d9e0728d1)
 
-
-#### Usage
+##### Usage
 
 ```bash
 $ ./maestro -h
@@ -44,21 +46,19 @@ Usage of ./maestro:
   -version
     	Show version information
 ```
-  
-#### Setup
 
-Download the binary from the `bin` folder of this repo and launch the service.
 
-`maestro` expects to find environment variables `MYSQL_USERNAME` and `MYSQL_PASSWORD` to connect to your database server.
+#### Connectivity to `maestro`
+It is essential that the Roku device is able to connect to `http://<your maestro endpoint>:8080`.
 
-`/etc/crontab:`
+You will get prompted for input if this value is not set before:
 
-<pre>
-# Set environment variables
-MYSQL_USERNAME="username"
-MYSQL_PASSWORD="dbPasswd"
-*/4  *  * * *   evuraan  /home/evuraan/maestro -dbHost 127.0.0.1  1>/dev/null 2>&1 || : 
-</pre>
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/2903f7c6-ad09-44c7-9c7f-5afdff9328fd)
+
+Enter your hostname or ip address:
+
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/ece69cf9-8246-4b63-97d8-ef9d9e0728d1)
+
 
 ## Video Processing
 
