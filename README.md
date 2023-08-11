@@ -17,7 +17,9 @@ MythTV Player for Roku
 
 
 ## Preview Channels
-- [Beta](https://my.roku.com/account/add/MythicalMythTVBeta)
+### Beta
+- Channel Access Code: `MythicalMythTVBeta`
+- or add beta channel from[ here](https://my.roku.com/account/add/MythicalMythTVBeta). 
 ## Other
 - [Privacy Policy](./other/Privacy_Policy.md)
 - [Terms of Use](./other/Terms_Of_Use.MD)
