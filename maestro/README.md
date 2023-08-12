@@ -81,7 +81,7 @@ If your videos are not playable, you will need to re-encode them to playable for
 
 ##### Default pickup folder
 
-The [utils](../utils) folder contains an script [example](../utils/mp4Cut.sh) - transcodes and overwrites the original recording file (eg: `/var/lib/mythtv/recordings/13301_20230806004300.ts`) - feel free to tweak and use according to your setup.
+The [utils](../utils) folder contains a script [example](../utils/mp4Cut.sh) - transcodes and overwrites the original recording file (eg: `/var/lib/mythtv/recordings/13301_20230806004300.ts`) - feel free to tweak and use according to your setup.
 
 ##### Custom pickup folder
 
