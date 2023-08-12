@@ -77,19 +77,38 @@ Factors like your Roku device capability and your MythTV recording formats will 
 
 For the `maestro`'s part, it merely picks up Videos from your `recordingsPath` folder.
 
-If your videos are not playable, you will need to re-encode them to playable formats. When done, place them into your `recordingsPath` folder:
+If your videos are not playable, you will need to re-encode them to playable formats. When done, place them into your `recordingsPath` folder.
+
+##### Default pickup folder
+
+The [utils](../utils) folder contains an script [example](../utils/mp4Cut.sh) - transcodes and overwrites the original recording file (eg: `/var/lib/mythtv/recordings/13301_20230806004300.ts`) - feel free to tweak and use according to your setup.
+
+##### Custom pickup folder
+
+You can write your processed (roku-playable) files into `/anotherFolder`, and use this folder as the `-recordingsPath` argument:
 
 ```bash
-ffmpeg -err_detect ignore_err  -i  <input file> -video_track_timescale 30000 -c copy -fflags +genpts <output file>
+$ mkdir /anotherFolder
+```
+
+```bash
+ffmpeg -err_detect ignore_err  -i  /var/lib/mythtv/recordings/13301_20230806004300.ts -video_track_timescale 30000 -c copy -fflags +genpts /anotherFolder/13301_20230806004300.ts
+ffmpeg -i  /var/lib/mythtv/recordings/13301_20230806004300.ts  -vframes 1  /anotherFolder/13301_20230806004300.ts.png
 ```
 
 Or, for an older Roku device, we had to specify the `mp3` audio codec for the output file:
 
 ```bash
-ffmpeg -err_detect ignore_err  -i  "$srcFile" -video_track_timescale 30000  -vcodec copy -acodec mp3 -fflags +genpts <output file>
+ffmpeg -err_detect ignore_err  -i  /var/lib/mythtv/recordings/13301_20230806004300.ts  -video_track_timescale 30000  -vcodec copy -acodec mp3 -fflags +genpts /anotherFolder/13301_20230806004300.ts
+ffmpeg -i  /var/lib/mythtv/recordings/13301_20230806004300.ts  -vframes 1  /anotherFolder/13301_20230806004300.ts.png
 ```
+You will need to ask `maestro` to pickup from this folder using the `-recordingsPath` option:
 
-The [utils](../utils) folder contains an script [example](../utils/mp4Cut.sh) - feel free to tweak and use according to your setup.
+```bash
+$ export MYSQL_USERNAME="username" MYSQL_PASSWORD="dbPasswd"
+$ ./maestro -recordingsPath  /anotherFolder -debug
+...
+```
 
 ## Thumbnails
 
