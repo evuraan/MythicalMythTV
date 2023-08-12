@@ -20,7 +20,7 @@ MYSQL_PASSWORD="dbPasswd"
 Or, run manually on the terminal as:
 
 ```bash
-$ export MYSQL_USERNAME="mythtv" MYSQL_PASSWORD="mythtv"
+$ export MYSQL_USERNAME="username" MYSQL_PASSWORD="dbPasswd"
 $ ./maestro -debug
 Listening on:
   1  http://127.0.0.1:8080/
