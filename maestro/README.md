@@ -75,7 +75,7 @@ Roku has specific format requirements for playback. Further, there are generatio
 
 Factors like your Roku device capability and your MythTV recording formats will determine if your recordings are natively playable by your Roku device.
 
-For the `maestro`'s part, it merely picks up Videos from your `recordingsPath` folder.
+For the `maestro`'s part, it merely picks up Videos and thumbnails from your `recordingsPath` folder.
 
 If your videos are not playable, you will need to re-encode them to playable formats. When done, place them into your `recordingsPath` folder.
 
