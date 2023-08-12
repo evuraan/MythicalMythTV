@@ -105,7 +105,6 @@ ffmpeg -i  /var/lib/mythtv/recordings/13301_20230806004300.ts  -vframes 1  /anot
 You will need to ask `maestro` to pickup from this folder using the `-recordingsPath` option:
 
 ```bash
-$ export MYSQL_USERNAME="username" MYSQL_PASSWORD="dbPasswd"
 $ ./maestro -recordingsPath  /anotherFolder -debug
 ...
 ```
