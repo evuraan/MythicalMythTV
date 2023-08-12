@@ -7,18 +7,27 @@
 Download the suitable binary from the [bin](./bin) folder and launch the service.
 
 `maestro` expects to find environment variables `MYSQL_USERNAME` and `MYSQL_PASSWORD` to connect to your database server.
-
+### Running maestro
 `/etc/crontab:`
-
 <pre>
 # Set environment variables
 MYSQL_USERNAME="username"
 MYSQL_PASSWORD="dbPasswd"
-*/4  *  * * *   evuraan  /home/evuraan/maestro -dbHost 127.0.0.1  1>/dev/null 2>&1 || : 
+# Launch maestro
+*/4  *  * * *   nobody  /usr/local/bin/maestro -dbHost 127.0.0.1  1>/dev/null 2>&1 || : 
 </pre>
 
+Or, run manually on the terminal as:
 
-##### Usage
+```bash
+$ export MYSQL_USERNAME="mythtv" MYSQL_PASSWORD="mythtv"
+$ ./maestro -debug
+Listening on:
+  1  http://127.0.0.1:8080/
+  2  http://192.168.1.35:8080/
+```
+
+#### Usage
 
 ```bash
 $ ./maestro -h
