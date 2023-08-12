@@ -27,7 +27,7 @@ Listening on:
   2  http://192.168.1.35:8080/
 ```
 
-#### Usage
+### Usage
 
 ```bash
 $ ./maestro -h
@@ -57,7 +57,7 @@ Usage of ./maestro:
 ```
 
 
-#### Connectivity to `maestro`
+## Connectivity to `maestro`
 It is essential that the Roku device is able to connect to `http://<your maestro endpoint>:8080`.
 
 You will get prompted for input if this value is not set before:
