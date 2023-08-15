@@ -27,6 +27,11 @@ Listening on:
 ### Usage
 
 ```bash
+$ ./maestro -version
+Mythical maestro: ver 3.1a
+```
+
+```bash
 $ ./maestro -h
 Usage of ./maestro:
   -debug
@@ -41,12 +46,16 @@ Usage of ./maestro:
     	minimum recording size in bytes (default 10000)
   -mythBE string
     	MythTV Backend and Port (default "127.0.0.1:6544")
+  -onTheFly
+    	enable on the fly encoding. Ffmpeg must be available in PATH
+    	See more at https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
   -pickupFolder string
     	folder containing playable video files and thumbnails (default "/var/lib/mythtv/recordings")
   -port int
     	server port (default 8080)
   -version
     	Show version information
+
 ```
 
 ## Connectivity to `maestro`
@@ -67,9 +76,11 @@ Roku has specific format requirements for playback. Further, there are generatio
 
 Factors like your Roku device capability and your MythTV recording formats will determine if your recordings are natively playable by your Roku device.
 
-For the `maestro`'s part, it merely picks up Videos and thumbnails from your `pickupFolder` folder.
+#### On the fly encoding
 
-If your videos are not playable, you will need to re-encode them to playable formats. When done, place them into your `pickupFolder` folder.
+Use the `-onTheFly` option to enable on the fly encoding. This will use `ffmpeg` to transcode your videos to a playable format.
+
+#### Pre-processing your videos
 
 ##### Default pickup folder
 
