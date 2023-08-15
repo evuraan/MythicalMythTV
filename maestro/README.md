@@ -78,7 +78,7 @@ Factors like your Roku device capability and your MythTV recording formats will 
 
 #### On the fly encoding
 
-Use the `-onTheFly` option to enable on the fly encoding. This will use `ffmpeg` to transcode your videos to a playable format.
+Use the `-onTheFly` option to enable on the fly encoding. This will try `ffmpeg` to transcode your videos to a playable format.
 
 #### Pre-processing your videos
 
