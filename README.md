@@ -15,11 +15,18 @@ MythTV Player for Roku
 - Setup [`maestro` service](./maestro/README.md) in your local network.
 - Download `Mythical MythTV Channel` on your Roku device. We recommend starting with the [Mythical MythTV Beta Channel.](https://my.roku.com/account/add/MythicalMythTVBeta)
 
-
 ## Preview Channels
+
 ### Beta
+
 - Channel Access Code: `MythicalMythTVBeta`
-- or add beta channel from[ here](https://my.roku.com/account/add/MythicalMythTVBeta). 
+- or add beta channel from[ here](https://my.roku.com/account/add/MythicalMythTVBeta).
+
+## Change Log
+
+- [Changelog](./Changelog.md)
+
 ## Other
+
 - [Privacy Policy](./other/Privacy_Policy.md)
 - [Terms of Use](./other/Terms_Of_Use.MD)

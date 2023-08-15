@@ -6,21 +6,18 @@
 
 Download the suitable binary from the [bin](./bin) folder and launch the service.
 
-`maestro` expects to find environment variables `MYSQL_USERNAME` and `MYSQL_PASSWORD` to connect to your database server.
 ### Running maestro
+
 `/etc/crontab:`
+
 <pre>
-# Set environment variables
-MYSQL_USERNAME="username"
-MYSQL_PASSWORD="dbPasswd"
 # Launch maestro
-*/4  *  * * *   nobody  /usr/local/bin/maestro -dbHost 127.0.0.1  1>/dev/null 2>&1 || : 
+*/4  *  * * *   nobody  /usr/local/bin/maestro 1>/dev/null 2>&1 || : 
 </pre>
 
 Or, run manually on the terminal as:
 
 ```bash
-$ export MYSQL_USERNAME="username" MYSQL_PASSWORD="dbPasswd"
 $ ./maestro -debug
 Listening on:
   1  http://127.0.0.1:8080/
@@ -32,10 +29,6 @@ Listening on:
 ```bash
 $ ./maestro -h
 Usage of ./maestro:
-  -dbHost string
-    	database host (default "127.0.0.1")
-  -dbName string
-    	database (default "mythconverg")
   -debug
     	enable debug mode
   -help
@@ -48,16 +41,16 @@ Usage of ./maestro:
     	minimum recording size in bytes (default 10000)
   -mythBE string
     	MythTV Backend and Port (default "127.0.0.1:6544")
+  -pickupFolder string
+    	folder containing playable video files and thumbnails (default "/var/lib/mythtv/recordings")
   -port int
     	server port (default 8080)
-  -recordingsPath string
-    	path for recordings folder (default "/var/lib/mythtv/recordings")
   -version
     	Show version information
 ```
 
-
 ## Connectivity to `maestro`
+
 It is essential that the Roku device is able to connect to `http://<your maestro endpoint>:8080`.
 
 You will get prompted for input if this value is not set before:
@@ -68,16 +61,15 @@ Enter your hostname or ip address:
 
 ![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/ece69cf9-8246-4b63-97d8-ef9d9e0728d1)
 
-
 ## Video Processing
 
 Roku has specific format requirements for playback. Further, there are generational differences between Roku devices as well.
 
 Factors like your Roku device capability and your MythTV recording formats will determine if your recordings are natively playable by your Roku device.
 
-For the `maestro`'s part, it merely picks up Videos and thumbnails from your `recordingsPath` folder.
+For the `maestro`'s part, it merely picks up Videos and thumbnails from your `pickupFolder` folder.
 
-If your videos are not playable, you will need to re-encode them to playable formats. When done, place them into your `recordingsPath` folder.
+If your videos are not playable, you will need to re-encode them to playable formats. When done, place them into your `pickupFolder` folder.
 
 ##### Default pickup folder
 
@@ -85,7 +77,7 @@ The [utils](../utils) folder contains a script [example](../utils/mp4Cut.sh) - t
 
 ##### Custom pickup folder
 
-You can write your processed (roku-playable) files into `/anotherFolder`, and use this folder as the `-recordingsPath` argument:
+You can write your processed (roku-playable) files into `/anotherFolder`, and use this folder as the `-pickupFolder` argument:
 
 ```bash
 $ mkdir /anotherFolder
@@ -102,16 +94,17 @@ Or, for an older Roku device, we had to specify the `mp3` audio codec for the ou
 ffmpeg -err_detect ignore_err  -i  /var/lib/mythtv/recordings/13301_20230806004300.ts  -video_track_timescale 30000  -vcodec copy -acodec mp3 -fflags +genpts /anotherFolder/13301_20230806004300.ts
 ffmpeg -i  /var/lib/mythtv/recordings/13301_20230806004300.ts  -vframes 1  /anotherFolder/13301_20230806004300.ts.png
 ```
-You will need to ask `maestro` to pickup from this folder using the `-recordingsPath` option:
+
+You will need to ask `maestro` to pickup from this folder using the `-pickupFolder` option:
 
 ```bash
-$ ./maestro -recordingsPath  /anotherFolder -debug
+$ ./maestro -pickupFolder  /anotherFolder -debug
 ...
 ```
 
 ## Thumbnails
 
-`recordingsPath` folder is also where `maestro` expects to find `.png` files to use as thumbnails.
+`pickupFolder` folder is also where `maestro` expects to find `.png` files to use as thumbnails.
 
 If your video `basename` is `13301_20230806004300.ts`, maestro will be looking for `13301_20230806004300.ts.png` file.
 
@@ -127,5 +120,4 @@ ffmpeg -i 13301_20230806004300.ts -ss 00:00:05 -vframes 1 13301_20230806004300.t
 - maestro does not share your traffic.
 - maestro does not generate any internet bound network traffic.
 - maestro does not have any backdoors.
-- maestro does not need write permissions to your database.
 - maestro does not need write permissions to your filesystem.
