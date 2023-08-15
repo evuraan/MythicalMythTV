@@ -47,7 +47,7 @@ Usage of ./maestro:
   -mythBE string
     	MythTV Backend and Port (default "127.0.0.1:6544")
   -onTheFly
-    	enable on the fly encoding. Ffmpeg must be available in PATH
+    	enable on the fly encoding. ffmpeg must be available in PATH.
     	See more at https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
   -pickupFolder string
     	folder containing playable video files and thumbnails (default "/var/lib/mythtv/recordings")
