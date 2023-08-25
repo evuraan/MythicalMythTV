@@ -60,15 +60,15 @@ Usage of ./maestro:
 
 ## Connectivity to `maestro`
 
-It is essential that the Roku device is able to connect to `http://<your maestro endpoint>:8080`.
+It is essential that the Roku device is able to connect to your `maestroBaseURL`:
 
 You will get prompted for input if this value is not set before:
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/2903f7c6-ad09-44c7-9c7f-5afdff9328fd)
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/21e6f706-2a23-4b1b-bf32-c2a9599830c9)
 
 Enter your hostname or ip address:
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/ece69cf9-8246-4b63-97d8-ef9d9e0728d1)
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/88ecaec5-d662-451a-bd98-8285e37aafde)
 
 ## Video Processing
 
