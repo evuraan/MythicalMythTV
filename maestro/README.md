@@ -60,7 +60,7 @@ Usage of ./maestro:
 
 ## Connectivity to `maestro`
 
-It is essential that the Roku device is able to connect to `http://<your maestro endpoint>`.
+It is essential that the Roku device is able to connect to your `maestroBaseURL`:
 
 You will get prompted for input if this value is not set before:
 
