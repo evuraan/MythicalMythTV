@@ -28,7 +28,7 @@ Listening on:
 
 ```bash
 $ ./maestro -version
-Mythical maestro: ver 3.1a
+Mythical maestro: ver 3.4e
 ```
 
 ```bash
@@ -38,12 +38,12 @@ Usage of ./maestro:
     	enable debug mode
   -help
     	Show this help message
-  -interval duration
-    	time interval to update records (default 5m0s)
   -maestroBaseURL string
     	maestro base url (default "http://maestro:8080")
   -minSize int
     	minimum recording size in bytes (default 10000)
+  -mtime duration
+    	recording file must be at least this old before it is accepted for playback (default 1h0m0s)
   -mythBE string
     	MythTV Backend and Port (default "127.0.0.1:6544")
   -onTheFly
@@ -55,8 +55,10 @@ Usage of ./maestro:
     	server port (default 8080)
   -version
     	Show version information
-
 ```
+
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/dbca45d9-fa35-4814-b6cb-503fd3cdf8e8)
+
 
 ## Connectivity to `maestro`
 
