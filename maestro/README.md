@@ -55,9 +55,10 @@ Usage of ./maestro:
     	server port (default 8080)
   -version
     	Show version information
-
-
 ```
+
+![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/dbca45d9-fa35-4814-b6cb-503fd3cdf8e8)
+
 
 ## Connectivity to `maestro`
 
