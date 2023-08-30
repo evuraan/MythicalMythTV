@@ -59,9 +59,6 @@ Usage of ./maestro:
         Show version information
 ```
 
-![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/dbca45d9-fa35-4814-b6cb-503fd3cdf8e8)
-
-
 ## Connectivity to `maestro`
 
 It is essential that the Roku device is able to connect to your `maestroBaseURL`:
