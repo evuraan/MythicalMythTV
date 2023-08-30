@@ -79,10 +79,12 @@ for a in $ts_files; do
 			srcFile="$x"
 		fi
 	fi
-	echo "ffmpeg src: $i"
+	echo "ffmpeg src: $srcFile"
 	ffmpeg -err_detect ignore_err  -i  "$srcFile" -video_track_timescale 30000 -c copy -fflags +genpts $y
-	# acodec mp3 for older roku
-	#ffmpeg -err_detect ignore_err  -i  "$srcFile" -video_track_timescale 30000  -vcodec copy -acodec mp3 -fflags +genpts $y
+	# acodec mp3, for older roku
+	# ffmpeg -err_detect ignore_err  -i  "$srcFile" -video_track_timescale 30000  -vcodec copy -acodec mp3 -fflags +genpts $y
+    # or, 
+    # ffmpeg -err_detect ignore_err -i "$srcFile" -map 0 -video_track_timescale 30000 -c:v copy -c:s copy -c:a mp3 -fflags +genpts "$y"
 	if [ -s "$y" ]; then
 		#cp "$y" "$i.mp4"
 		#mv "$i" "$i.transcoded_to_mp4"
