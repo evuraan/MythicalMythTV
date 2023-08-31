@@ -37,10 +37,6 @@ You may want to have `maestro` ignore delete requests from the latter. If so, la
 $ ./maestro -ignoreDelete -port 8081 -maestroBaseURL http://othermaestro:8081/
 ```
 
-## On the fly encoding
-- ffmpeg must be in path.
-- seek (ffwd/rewind) will not work. (See #6)
-
 ## Troubleshooting
 
 ### I encountered an issue. What should I do?
