@@ -29,12 +29,12 @@ Use `-mtime` flag to avoid recordings that are "too" new. Depending on your setu
 
 ### What is the purpose of `-ignoreDelete` ?
 
-Suppose you are running maestro as `http://maestro:8080/` for a set of devices, and `http://maestro:8081/` for another set, or, your parent's roku devices. 
+Suppose, you are running maestro as `http://maestro:8080/` for a set of devices. You would also like another endpoint `http://othermaestro:8081/` for, say, your parent's. 
 
-You may want to have `maestro` ignore delete requests from the latter, if so, launch the second instance with this flag:
+You may want to have `maestro` ignore delete requests from the latter. If so, launch the second instance with this flag:
 
 ```bash
-$ ./maestro -ignoreDelete -port 8081
+$ ./maestro -ignoreDelete -port 8081 -maestroBaseURL http://othermaestro:8081/
 ```
 
 ## On the fly encoding
