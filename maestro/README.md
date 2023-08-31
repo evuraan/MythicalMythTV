@@ -125,6 +125,8 @@ If you have to generate thumbnails, here's an example:
 ```bash
 ffmpeg -i 13301_20230806004300.ts -ss 00:00:05 -vframes 1 13301_20230806004300.ts.png
 ```
+## Frequently Asked Questions
+See [FAQ](./faq.md).
 
 ## Security and Privacy
 
