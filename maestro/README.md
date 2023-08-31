@@ -27,11 +27,6 @@ Listening on:
 ### Usage
 
 ```bash
-$ ./maestro -version
-Mythical maestro: ver 3.4e
-```
-
-```bash
 $ ./maestro -h
 Usage of ./maestro:
   -debug
@@ -120,7 +115,7 @@ $ ./maestro -pickupFolder  /anotherFolder -debug
 
 ## Thumbnails
 
-`pickupFolder` folder is also where `maestro` expects to find `.png` files to use as thumbnails.
+`maestro` expects to find `.png` files to use as thumbnails in the same folder as the video file.
 
 If your video `basename` is `13301_20230806004300.ts`, maestro will be looking for `13301_20230806004300.ts.png` file.
 
@@ -137,3 +132,4 @@ ffmpeg -i 13301_20230806004300.ts -ss 00:00:05 -vframes 1 13301_20230806004300.t
 - maestro does not generate any internet bound network traffic.
 - maestro does not have any backdoors.
 - maestro does not need write permissions to your filesystem.
+- maestro does not need any access to your database.
