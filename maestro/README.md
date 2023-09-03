@@ -12,7 +12,7 @@ Download the suitable binary from the [bin](./bin) folder and launch the service
 
 <pre>
 # Launch maestro
-*/4  *  * * *   nobody  /usr/local/bin/maestro 1>/dev/null 2>&1 || : 
+*/4  *  * * *   mythtv  /usr/local/bin/maestro 1>/dev/null 2>&1 || : 
 </pre>
 
 Or, run manually on the terminal as:
@@ -27,36 +27,32 @@ Listening on:
 ### Usage
 
 ```bash
-$ ./maestro -version
-Mythical maestro: ver 3.4e
-```
-
-```bash
-$ ./maestro -h
-Usage of ./maestro:
+$ ./maestro -help
+Usage: maestro [options]
+Options:
   -debug
-        enable debug mode
+    	enable debug mode
   -help
-        Show this help message
+    	Show this help message
   -ignoreDelete
-        ignore delete requests
+    	ignore delete requests
   -maestroBaseURL string
-        maestro base url (default "http://maestro:8080")
+    	maestro base url (default "http://maestro:8080/")
   -minSize int
-        minimum recording size in bytes (default 10000)
+    	minimum recording size in bytes (default 10000)
   -mtime duration
-        recording file must be at least this old before it is accepted for playback (default 1h0m0s)
+    	recording file must be at least this old before it is accepted for playback (default 1h0m0s)
   -mythBE string
-        MythTV Backend and Port (default "127.0.0.1:6544")
+    	MythTV Backend and Port (default "127.0.0.1:6544")
   -onTheFly
-        enable on the fly encoding. ffmpeg must be available in PATH.
-        See more at https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
+    	enable on the fly encoding. ffmpeg must be available in PATH.
+    	See more at https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
   -pickupFolder string
-        folder containing playable video files and thumbnails (default "/var/lib/mythtv/recordings")
+    	(Optional) Folder containing playable video files and thumbnails (or symlinks to..) (default "/var/lib/mythtv/recordings/")
   -port int
-        server port (default 8080)
+    	server port (default 8080)
   -version
-        Show version information
+    	Show version information
 ```
 
 ## Connectivity to `maestro`
@@ -120,7 +116,7 @@ $ ./maestro -pickupFolder  /anotherFolder -debug
 
 ## Thumbnails
 
-`pickupFolder` folder is also where `maestro` expects to find `.png` files to use as thumbnails.
+`maestro` expects to find `.png` files to use as thumbnails in the same folder as the video file.
 
 If your video `basename` is `13301_20230806004300.ts`, maestro will be looking for `13301_20230806004300.ts.png` file.
 
@@ -130,6 +126,10 @@ If you have to generate thumbnails, here's an example:
 ffmpeg -i 13301_20230806004300.ts -ss 00:00:05 -vframes 1 13301_20230806004300.ts.png
 ```
 
+## Frequently Asked Questions
+
+See [FAQ](./faq.md).
+
 ## Security and Privacy
 
 - maestro does not read your traffic.
@@ -137,3 +137,4 @@ ffmpeg -i 13301_20230806004300.ts -ss 00:00:05 -vframes 1 13301_20230806004300.t
 - maestro does not generate any internet bound network traffic.
 - maestro does not have any backdoors.
 - maestro does not need write permissions to your filesystem.
+- maestro does not need any access to your database.
