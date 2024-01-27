@@ -10,7 +10,7 @@ Three buttons provides the sorting functionality.
 2. The `Right` button expands each title and shows the available recordings in that title in chronological order.
 3. The `Options` or `Start` button shows all available recordings in chronological order.
 
-At any time you can choose any of these layouts. The `Left` button is the default layout.
+You can switch between these layouts at any time to suit your preferences. The `Left` button is the default layout.
 
 ![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/2dc6d44e-ea07-42b9-ab0c-d2e8454969ec)
 
