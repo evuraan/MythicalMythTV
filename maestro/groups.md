@@ -8,7 +8,7 @@ Three buttons provides the sorting functionality.
 
 1. The `Left` button groups all your recordings in alphabetical order.
 2. The `Right` button expands each title and shows the available recordings in that title in chronological order.
-3. The `Options` or `Start` button shows all available recordings in chronological order.
+3. The `Options` or `Star` button shows all available recordings in chronological order.
 
 You can switch between these layouts at any time to suit your preferences. The `Left` button is the default layout.
 
