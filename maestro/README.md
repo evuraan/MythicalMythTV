@@ -31,28 +31,30 @@ $ ./maestro -help
 Usage: maestro [options]
 Options:
   -debug
-    	enable debug mode
+        enable debug mode
   -help
-    	Show this help message
+        Show this help message
   -ignoreDelete
-    	ignore delete requests
+        ignore delete requests
   -maestroBaseURL string
-    	maestro base url (default "http://maestro:8080/")
+        maestro base url (default "http://maestro:8080/")
+  -mimeType string
+        (Optional) Set custom MIME type for video files, example: "video/mp2t"
   -minSize int
-    	minimum recording size in bytes (default 10000)
+        minimum recording size in bytes (default 10000)
   -mtime duration
-    	recording file must be at least this old before it is accepted for playback (default 1h0m0s)
+        recording file must be at least this old before it is accepted for playback (default 1h0m0s)
   -mythBE string
-    	MythTV Backend and Port (default "127.0.0.1:6544")
+        MythTV Backend and Port (default "127.0.0.1:6544")
   -onTheFly
-    	enable on the fly encoding. ffmpeg must be available in PATH.
-    	See more at https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
+        enable on the fly encoding. ffmpeg must be available in PATH.
+        See more at https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
   -pickupFolder string
-    	(Optional) Folder containing playable video files and thumbnails (or symlinks to..) (default "/var/lib/mythtv/recordings/")
+        (Optional) Folder containing playable video files and thumbnails (or symlinks to..) (default "/var/lib/mythtv/recordings/")
   -port int
-    	server port (default 8080)
+        server port (default 8080)
   -version
-    	Show version information
+        Show version information
 ```
 
 ## Connectivity to `maestro`
