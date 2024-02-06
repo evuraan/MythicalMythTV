@@ -1,8 +1,8 @@
 # Groups (Display)
 
-`maestro` now organizes the recordings into groups (i.e. titles or records).
+`maestro` and Mythical player can organize the recordings into groups (i.e. titles or records).
 
-While this does not break backward compatibility, update your maestro to the latest version to get the best experience.
+While this does not break backward compatibility, update your maestro and app to the latest versions to get the best experience.
 
 Three buttons provides the sorting functionality.
 
