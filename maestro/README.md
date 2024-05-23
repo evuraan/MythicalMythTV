@@ -75,10 +75,9 @@ Roku has specific format requirements for playback. Further, there are generatio
 Factors like your Roku device capability and your MythTV recording formats will determine if your recordings are natively playable by your Roku device.
 
 #### On the fly encoding
+This is now the default mode, it will try `ffmpeg` to transcode your videos to a playable format. `ffmpeg` must be available in your `PATH`.
 
-Use the `-onTheFly` option to enable on the fly encoding.
-
-This will try `ffmpeg` to transcode your videos to a playable format. `ffmpeg` must be available in your `PATH`.
+Use the `-disableOnTheFly` option to disable on the fly encoding, you will need to pre-process/pre-cook your videos: 
 
 #### Pre-processing your videos
 
