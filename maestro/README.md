@@ -77,7 +77,7 @@ Factors like your Roku device capability and your MythTV recording formats will 
 #### On the fly encoding
 This is now the default mode, it will try `ffmpeg` to transcode your videos to a playable format. `ffmpeg` must be available in your `PATH`.
 
-Use the `-disableOnTheFly` option to disable on the fly encoding, you will need to pre-process/pre-cook your videos: 
+Use the `-disableOnTheFly` option to disable on the fly encoding, you will need to pre-process/pre-cook your videos ready for pickup: 
 
 #### Pre-processing your videos
 
