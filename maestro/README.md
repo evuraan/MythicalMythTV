@@ -58,7 +58,9 @@ Usage :
 
 ## Connectivity to `maestro`
 
-It is essential that the Roku device is able to connect to your `maestroBaseURL`:
+It is essential that the Roku device is able to connect to your `maestroBaseURL`. 
+
+Ensure that you supply the same value to `maestro` using the `-maestroBaseURL` argument.
 
 You will get prompted for input if this value is not set before:
 
