@@ -12,7 +12,7 @@ Download the suitable binary from the [bin](./bin) folder and launch the service
 
 <pre>
 # Launch maestro
-*/4  *  * * *   mythtv  /usr/local/bin/maestro 1>/dev/null 2>&1 || : 
+*/4  *  * * *   mythtv  /usr/local/bin/maestro -port 8118 -maestroBaseURL http://192.168.1.135:8118/
 </pre>
 
 Or, run manually on the terminal as:
