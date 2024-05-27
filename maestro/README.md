@@ -2,7 +2,7 @@
 
 `maestro` is the orchestrating component the Mythical MythTV Roku channel connects to.
 
-Run maestro using the same `-maestroBaseURL` argument your [your roku app uses](https://github.com/evuraan/MythicalMythTV/blob/main/images/maestro_baseURL.jpg). 
+Run maestro with the same `-maestroBaseURL` argument your [your roku app uses](https://github.com/evuraan/MythicalMythTV/blob/main/images/maestro_baseURL.jpg). 
 
 ## Setting up `maestro`
 
