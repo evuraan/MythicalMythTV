@@ -2,17 +2,20 @@
 
 `maestro` is the orchestrating component the Mythical MythTV Roku channel connects to.
 
+Run maestro with the same `-maestroBaseURL` argument your [your roku app uses](https://github.com/evuraan/MythicalMythTV/blob/main/images/maestro_baseURL.jpg). 
+
 ## Setting up `maestro`
 
 Download the suitable binary from the [bin](./bin) folder and launch the service.
-
+### Dependency
+`ffmpeg` must be available in your `PATH`.
 ### Running maestro
 
 `/etc/crontab:`
 
 <pre>
 # Launch maestro
-*/4  *  * * *   mythtv  /usr/local/bin/maestro 1>/dev/null 2>&1 || : 
+*/4  *  * * *   mythtv  /usr/local/bin/maestro -port 8118 -maestroBaseURL http://192.168.1.135:8118/
 </pre>
 
 Or, run manually on the terminal as:
@@ -28,38 +31,39 @@ Listening on:
 
 ```bash
 $ ./maestro -help
-Usage: maestro [options]
-Options:
+Usage :
   -debug
-        enable debug mode
+    	enable debug mode
+  -disableOnTheFly
+    	Disables on-the-fly encoding. If set, you must pre-process your video files. 
+    	See https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
   -help
-        Show this help message
+    	Show this help message
   -ignoreDelete
-        ignore delete requests
+    	ignore delete requests
   -maestroBaseURL string
-        maestro base url (default "http://maestro:8080/")
+    	maestro base url (default "http://maestro:8080/")
   -mimeType string
-        (Optional) Set custom MIME type for video files, example: "video/mp2t"
+    	(Optional) Set custom MIME type for video files, example: "video/mp2t"
   -minSize int
-        minimum recording size in bytes (default 10000)
+    	minimum recording size in bytes (default 10000)
   -mtime duration
-        recording file must be at least this old before it is accepted for playback (default 1h0m0s)
+    	recording file must be at least this old before it is accepted for playback (default 1h0m0s)
   -mythBE string
-        MythTV Backend and Port (default "127.0.0.1:6544")
-  -onTheFly
-        enable on the fly encoding. ffmpeg must be available in PATH.
-        See more at https://github.com/evuraan/MythicalMythTV/tree/main/maestro#video-processing
+    	MythTV Backend and Port (default "127.0.0.1:6544")
   -pickupFolder string
-        (Optional) Folder containing playable video files and thumbnails (or symlinks to..) (default "/var/lib/mythtv/recordings/")
+    	(Optional) Folder containing playable video files and thumbnails (or symlinks to..) (default "/var/lib/mythtv/recordings/")
   -port int
-        server port (default 8080)
+    	server port (default 8080)
   -version
-        Show version information
+    	Show version information
 ```
 
 ## Connectivity to `maestro`
 
-It is essential that the Roku device is able to connect to your `maestroBaseURL`:
+It is essential that the Roku device is able to connect to your `maestroBaseURL`. 
+
+Ensure that you supply the same value to `maestro` using the `-maestroBaseURL` argument.
 
 You will get prompted for input if this value is not set before:
 
@@ -76,10 +80,9 @@ Roku has specific format requirements for playback. Further, there are generatio
 Factors like your Roku device capability and your MythTV recording formats will determine if your recordings are natively playable by your Roku device.
 
 #### On the fly encoding
+This is now the default mode, it will try `ffmpeg` to transcode your videos to a playable format. `ffmpeg` must be available in your `PATH`.
 
-Use the `-onTheFly` option to enable on the fly encoding.
-
-This will try `ffmpeg` to transcode your videos to a playable format. `ffmpeg` must be available in your `PATH`.
+Use the `-disableOnTheFly` option to disable on the fly encoding, you will need to pre-process/pre-cook your videos ready for pickup: 
 
 #### Pre-processing your videos
 

@@ -14,7 +14,7 @@ MythTV Player for Roku
 
 - Setup [`maestro` service](./maestro/README.md) in your local network.
 - Download `Mythical MythTV Channel` on your Roku device. Use either:
-  1. [Mythical MythTV Beta Channel](https://my.roku.com/account/add/MythicalMythTVBeta) 
+  1. [Mythical MythTV Beta Channel](https://my.roku.com/account/add/MythicalMythTVBeta)
   2. [Mythical MythTV Trial Player](https://channelstore.roku.com/details/89459fb0cfac7e876489853ba8009675/mythical-mythtv-trial-player)
 
 ## Roku remote
