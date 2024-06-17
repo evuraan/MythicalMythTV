@@ -15,7 +15,7 @@ Download the suitable binary from the [bin](./bin) folder and launch the service
 
 <pre>
 # Launch maestro
-*/4  *  * * *   mythtv  /usr/local/bin/maestro -port 8118 -maestroBaseURL http://192.168.1.135:8118/
+*/4  *  * * *   mythtv  /usr/local/bin/maestro -port 8118 
 </pre>
 
 Or, run manually on the terminal as:
@@ -42,7 +42,7 @@ Usage :
   -ignoreDelete
     	ignore delete requests
   -maestroBaseURL string
-    	maestro base url (default "http://maestro:8080/")
+    	(Optional) maestro base url
   -mimeType string
     	(Optional) Set custom MIME type for video files, example: "video/mp2t"
   -minSize int
