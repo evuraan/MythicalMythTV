@@ -61,8 +61,6 @@ Usage :
 
 It is essential that the Roku device is able to connect to your `maestroBaseURL`. 
 
-Ensure that you supply the same value to `maestro` using the `-maestroBaseURL` argument.
-
 You will get prompted for input if this value is not set before:
 
 ![image](https://github.com/evuraan/MythicalMythTV/assets/39205936/21e6f706-2a23-4b1b-bf32-c2a9599830c9)
