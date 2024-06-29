@@ -2,8 +2,6 @@
 
 `maestro` is the orchestrating component the Mythical MythTV Roku channel connects to.
 
-Run maestro with the same `-maestroBaseURL` argument your [your roku app uses](https://github.com/evuraan/MythicalMythTV/blob/main/images/maestro_baseURL.jpg). 
-
 ## Setting up `maestro`
 
 Download the suitable binary from the [bin](./bin) folder and launch the service.
@@ -15,7 +13,7 @@ Download the suitable binary from the [bin](./bin) folder and launch the service
 
 <pre>
 # Launch maestro
-*/4  *  * * *   mythtv  /usr/local/bin/maestro -port 8118 -maestroBaseURL http://192.168.1.135:8118/
+*/4  *  * * *   mythtv  /usr/local/bin/maestro -port 8118 
 </pre>
 
 Or, run manually on the terminal as:
@@ -42,7 +40,7 @@ Usage :
   -ignoreDelete
     	ignore delete requests
   -maestroBaseURL string
-    	maestro base url (default "http://maestro:8080/")
+    	(Optional) maestro base url
   -mimeType string
     	(Optional) Set custom MIME type for video files, example: "video/mp2t"
   -minSize int
@@ -62,8 +60,6 @@ Usage :
 ## Connectivity to `maestro`
 
 It is essential that the Roku device is able to connect to your `maestroBaseURL`. 
-
-Ensure that you supply the same value to `maestro` using the `-maestroBaseURL` argument.
 
 You will get prompted for input if this value is not set before:
 
