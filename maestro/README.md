@@ -135,6 +135,8 @@ See [FAQ](./faq.md).
 
 ## Security and Privacy
 
+By default, 
+
 - maestro does not read your traffic.
 - maestro does not share your traffic.
 - maestro does not generate any internet bound network traffic.
