@@ -36,6 +36,12 @@ You may want to have `maestro` ignore delete requests from the latter. If so, la
 ```bash
 $ ./maestro -ignoreDelete -port 8081 -maestroBaseURL http://othermaestro:8081/
 ```
+### Running maestro: Can I run maestro without a MythTV backend?
+Sure you can. Use the `-remoteFeeds` option:
+
+```bash
+$ maestro  -port 9000  -disableOnTheFly -noMythBE -debug -ignoreDelete  -remoteFeeds https://evuraan.info/evuraan/stuff/Mythical/json.feed
+```
 
 ## Troubleshooting
 
