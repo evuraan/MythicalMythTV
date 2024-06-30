@@ -49,10 +49,14 @@ Usage :
     	recording file must be at least this old before it is accepted for playback (default 1h0m0s)
   -mythBE string
     	MythTV Backend and Port (default "127.0.0.1:6544")
+  -noMythBE
+    	When you are running maestro with no mythBE around
   -pickupFolder string
     	(Optional) Folder containing playable video files and thumbnails (or symlinks to..) (default "/var/lib/mythtv/recordings/")
   -port int
     	server port (default 8080)
+  -remoteFeeds string
+    	(Optional) Comma-separated remote feed URLs
   -version
     	Show version information
 ```
