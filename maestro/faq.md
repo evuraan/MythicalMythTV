@@ -42,6 +42,21 @@ Sure you can. Use the `-remoteFeeds` option:
 ```bash
 $ maestro  -port 9000  -disableOnTheFly -noMythBE -debug -ignoreDelete  -remoteFeeds https://evuraan.info/evuraan/stuff/Mythical/json.feed
 ```
+### I have two backends. How to export the feeds so it can be syndicated by another `maestro` instance?
+On your backend1, start maestro on an alt port, with `-ignoreDelete` option:
+```bash
+$ ./maestro  -port 9000 -ignoreDelete 
+syndicating 
+Listening on:
+  1  http://127.0.0.1:9000/
+  2  http://192.168.2.35:9000/
+```
+Then launch the client instance using the `-remoteFeeds` option that reads from your above feed.
+```bash
+$ ./maestro -ignoreDelete -port 8081 -remoteFeeds http://192.168.2.35:9000/feed 
+```
+Connect your roku this instance's port 8081. 
+
 
 ## Troubleshooting
 
